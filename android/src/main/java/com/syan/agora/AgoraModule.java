@@ -107,6 +107,7 @@ public class AgoraModule extends ReactContextBaseJavaModule {
                         WritableMap obj = Arguments.createMap();
                         obj.putInt("uid", speakers[i].uid);
                         obj.putInt("volume", speakers[i].volume);
+                        arr.pushMap(obj);
                     }
 
                     WritableMap map = Arguments.createMap();
