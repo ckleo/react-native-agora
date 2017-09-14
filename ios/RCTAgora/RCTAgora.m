@@ -320,6 +320,15 @@ RCT_EXPORT_METHOD(getSdkVersion:(RCTResponseSenderBlock)callback){
     [self sendEvent:params];
 }
 
+- (void)rtcEngine:(AgoraRtcEngineKitForGaming *)engine didAudioMuted:(BOOL)muted byUid:(NSUInteger)uid {
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"type"] = @"onUserMuteAudio";
+    params[@"uid"] = uid;
+    params[@"muted"] = muted;
+
+    [self sendEvent:params];   
+}
+
 - (void)sendEvent:(NSDictionary *)params {
     [_bridge.eventDispatcher sendDeviceEventWithName:@"agoraEvent" body:params];
 }

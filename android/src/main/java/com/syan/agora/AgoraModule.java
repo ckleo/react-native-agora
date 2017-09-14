@@ -119,6 +119,20 @@ public class AgoraModule extends ReactContextBaseJavaModule {
             });
         }
 
+        @Override
+        public void onUserMuteAudio (int uid, boolean muted) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    WritableMap map = Arguments.createMap();
+                    map.putString("type", "onUserMuteAudio");
+                    map.putArray("uid", uid);
+                    map.putInt("muted", muted);
+                    commonEvent(map);
+                }
+            });
+        }
+
         /**
          * 错误信息
          */
