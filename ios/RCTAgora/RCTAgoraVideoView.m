@@ -29,7 +29,7 @@
 //    }
 //}
 
-- (void)setShowLocalVideo:(Boolean)showLocalVideo {
+- (void)setShowLocalVideo:(BOOL)showLocalVideo {
     if (showLocalVideo) {
         AgoraRtcVideoCanvas *canvas = [[AgoraRtcVideoCanvas alloc] init];
         canvas.uid = [AgoraConst share].localUid;
