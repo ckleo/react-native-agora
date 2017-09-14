@@ -126,8 +126,8 @@ public class AgoraModule extends ReactContextBaseJavaModule {
                 public void run() {
                     WritableMap map = Arguments.createMap();
                     map.putString("type", "onUserMuteAudio");
-                    map.putArray("uid", uid);
-                    map.putInt("muted", muted);
+                    map.putInt("uid", uid);
+                    map.putBoolean("muted", muted);
                     commonEvent(map);
                 }
             });
