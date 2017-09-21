@@ -58,12 +58,8 @@ public class AgoraManager {
         } catch (Exception e) {
             throw new RuntimeException("NEED TO check rtc sdk init fatal error\n" + Log.getStackTraceString(e));
         }
-        //开启视频功能
-        mRtcEngine.enableVideo();
-        mRtcEngine.setVideoProfile(options.getInt("videoProfile"), options.getBoolean("swapWidthAndHeight")); //视频配置，
-        mRtcEngine.enableWebSdkInteroperability(true);  //设置和web通信
+        mRtcEngine.disableVideo();
         mRtcEngine.setChannelProfile(options.getInt("channelProfile")); //设置模式
-        mRtcEngine.setClientRole(options.getInt("clientRole"), null); //设置角色
     }
 
     /**

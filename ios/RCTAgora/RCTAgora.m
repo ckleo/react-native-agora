@@ -56,11 +56,7 @@ RCT_EXPORT_METHOD(init:(NSDictionary *)options) {
     
     //频道模式
     [self.rtcEngine setChannelProfile:[options[@"channelProfile"] integerValue]];
-    //启用双流模式
-    [self.rtcEngine enableDualStreamMode:YES];
-    [self.rtcEngine enableVideo];
-    [self.rtcEngine setVideoProfile:[options[@"videoProfile"] integerValue]swapWidthAndHeight:[options[@"swapWidthAndHeight"]boolValue]];
-    [self.rtcEngine setClientRole:[options[@"clientRole"] integerValue] withKey:nil];
+    [self.rtcEngine disableVideo];
     
     //Agora Native SDK 与 Agora Web SDK 间的互通
     [self.rtcEngine enableWebSdkInteroperability:YES];
