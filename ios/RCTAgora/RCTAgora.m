@@ -57,10 +57,6 @@ RCT_EXPORT_METHOD(init:(NSDictionary *)options) {
     //频道模式
     [self.rtcEngine setChannelProfile:[options[@"channelProfile"] integerValue]];
     [self.rtcEngine disableVideo];
-    
-    //Agora Native SDK 与 Agora Web SDK 间的互通
-    [self.rtcEngine enableWebSdkInteroperability:YES];
-    
 }
 
 //加入房间

@@ -54,7 +54,6 @@ public class AgoraManager {
         //创建RtcEngine对象，mRtcEventHandler为RtcEngine的回调
         try {
             mRtcEngine = RtcEngine.create(context, options.getString("appid"), mRtcEventHandler);
-
         } catch (Exception e) {
             throw new RuntimeException("NEED TO check rtc sdk init fatal error\n" + Log.getStackTraceString(e));
         }
