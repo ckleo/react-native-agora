@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <React/RCTBridgeModule.h>
-#import <AgoraRtcEngineKit/AgoraRtcEngineKit.h>
+#import <AgoraAudioKit/AgoraRtcEngineKit.h>
 
 @interface RCTAgora : NSObject<RCTBridgeModule, AgoraRtcEngineDelegate>
 

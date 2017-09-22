@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Syan. All rights reserved.
 //
 
-#import <AgoraRtcEngineKit/AgoraRtcEngineKit.h>
+#import <AgoraAudioKit/AgoraRtcEngineKit.h>
 
 @interface AgoraConst : NSObject
 
